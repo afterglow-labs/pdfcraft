@@ -3,11 +3,6 @@ name: CI
 # Quality gates for every push to main and every pull request (`cargo xtask ci`), through the
 # suite's shared gate workflow in craft-common-actions. Nightly fuzzing is in fuzz.yml.
 on:
-  push:
-    branches: [main]
-  pull_request:
-    # `labeled` so that adding `full-ci` to an open PR starts a run with Windows in it.
-    types: [opened, synchronize, reopened, labeled]
   workflow_dispatch:
 
 # The token is only used to check out the code: no job writes to the repository.

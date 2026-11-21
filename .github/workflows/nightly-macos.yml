@@ -5,8 +5,6 @@ name: Nightly macOS
 # builds and signs the macOS app without running the tests. This one leg a night finds a
 # macOS-only failure within a day, not at release time or from a user.
 on:
-  schedule:
-    - cron: "41 2 * * *"
   workflow_dispatch:
 
 # The token is only used to check out the code: no job writes to the repository.
